@@ -1,0 +1,7 @@
+{
+    [Error: getaddrinfo ENOTFOUND api..openweathermap.org]
+    code: 'ENOTFOUND',
+        errno: 'ENOTFOUND',
+        syscall: 'getaddrinfo',
+        hostname: 'api..openweathermap.org'
+}
