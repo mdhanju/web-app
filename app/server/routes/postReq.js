@@ -24,24 +24,27 @@ exports.weatherData = function (req, res) {
 
     parseForm.printRes(req);
 
-    city = req.body.city;
+    //    city = req.body.city;
+    //    var url = "http://api.openweathermap.org/data/2.5/weather";
+    //    var reqObj = url + '?q=' + city;
+    //    weather.getWeatherCity(reqObj, function (result) {
 
-    var url = "http://api.openweathermap.org/data/2.5/weather";
-    var reqObj = url + '?q=' + city;
-    //    reqObj = 'http://api.wunderground.com/api/' + '751ccf6e87586dc4' + '/conditions/q/CA/' + 'city' + '.json';
-
-    weather.getWeatherCity(reqObj, function (result) {
+    weather.getWeatherCity("http://api.openweathermap.org/data/2.5/weather" + req.body.city, function (result) {
         console.log('**** in callback function after getting weather ****');
         console.log(result);
         var weatherDes;
-        if (!result) {
-            weatherDes = 'Not able to retrieve weather';
+        if ((!result) || (404) || (req.body.city === "")) {
+            weatherDes = 'Not able to retrieve weather or Invalid city';
         } else {
-            weatherDes = JSON.parse(result).weather[0].description;
+            weatherDesTemp = JSON.parse(result);
+            if (weatherDesTemp.hasOwnProperty("message")) {
+                weatherDes = 'Invalid city';
+            } else {
+                weatherDes = weatherDesTemp.weather[0].description;
+            }
         }
-
         res.render('resultweather', {
-            city: city,
+            city: req.body.city,
             weather: weatherDes
         });
 

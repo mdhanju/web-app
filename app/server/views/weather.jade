@@ -11,16 +11,16 @@ block header
                               //  option(value='', selected='selected') United States
                         br
                         .con-label-input
-                            label(for='loanTerm') Please select City : 
-                            select.form-control#loanTerm(name='city',autofocus='autofocus')
-                                //option(value='', selected='selected') Select City
-                                option Los Angeles   
-                                option San Francisco
-                                option Fremont
-                                option Texas
-                                option New York
-                                option Boston
-                                option New Delhi
+                            include ./includes/weather/userInput.jade
+                        //br
+                        //.con-label-input
+                            include ./includes/weather/countries.jade
+                        //br
+                        //.con-label-input
+                            include ./includes/weather/states.jade 
+                        //br
+                        //.con-label-input
+                            include ./includes/weather/cities.jade
                         br
                         br
                         .btn-custom-home-mor-holder

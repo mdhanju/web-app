@@ -1,22 +1,5 @@
-extends layout.jade
-block header
-    .row
-        .col-sm-6.col-sm-6-custom
-            form.form-inline.col-sm-6-custom-home-mor(action='/morData',method='post')
-                        h3.form-signin-heading Mortgage Calculator
-                        .con-label-input
-                            div(data-role='fieldcontain')
-                                fieldset(data-role='controlgroup')
-                                    label(for='homeValue') Home Value: 
-                                        input(id='homeValue',type='text',value='',name='homeValue')
-                            br
-                            div(data-role='fieldcontain')
-                              fieldset(data-role='controlgroup')
-                                label(for='email') email
-                                   input(id='email',type='text',value='',placeholder='@',name='email')
-                            div#passworddiv(data-role='fieldcontain')
-                              fieldset(data-role='controlgroup')
-                                label(for='password') password
-                                   input(id='password',type='password',value='',placeholder='',name='password')
-                            div(data-role='fieldcontain')   
-                              input(type='submit',value='Sign Up',data-transition='fade', data-theme='c')
+label(for='loanTerm') Please select City : 
+select(id="xxx", name="xxxyyy")
+        -for(var i = 1;i<10;i++){
+        option(value="#{i}") Some value for #{i}
+        -}
