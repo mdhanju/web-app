@@ -8,7 +8,6 @@ var bodyParser = require('body-parser');
 var app = express();
 var router = express.Router();
 
-
 //all environments 
 app.set('port', process.env.port || 3000);
 app.set('host', process.env.host || 'localhost');
@@ -24,7 +23,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.all('/', function (req, res, next) {
-    console.log('Accessing the secret section ...');
+    console.log('Getting Home Page  ...');
     next(); // pass control to the next handler
 });
 
@@ -34,10 +33,12 @@ app.get('/employees', routes.employees);
 app.get('/contact', routes.contact);
 app.get('/mission', routes.mission);
 app.get('/weather', routes.weather);
+app.get('/carLoan', routes.carLoan);
 app.get('/users', user.list);
 
 app.post('/morData', postData.morData);
 app.post('/weatherData', postData.weatherData);
+app.post('/carLoan', postData.carLoan);
 
 
 http.createServer(app).listen(app.get('port'), app.get('port'), function () {

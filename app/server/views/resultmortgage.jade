@@ -1,8 +1,9 @@
 extends layout.jade
-block header
-    .container
-        .jumbotron
-            a.btn.btn-lg(href='/') Go Back
-            br
-            h2 Monthly Tnstallment is $ #{monthlyInst}
-            h2 Bi-Monthly Tnstallment is $ #{biMonthlyInst}
+block body
+    include ./header.jade
+        .container
+            .jumbotron
+                a.btn.btn-lg(href='/') Go Back
+                br
+                h2 Monthly Tnstallment is $ #{monthlyInst}
+                h2 Bi-Monthly Tnstallment is $ #{biMonthlyInst}

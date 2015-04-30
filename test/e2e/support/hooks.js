@@ -1,8 +1,7 @@
 var myBeforeHooks = function () {
-    this.Before(function (scenario, callback) {
+    this.Before(function (callback) {
         //            this will be executed before each scenarios
-        console.log('Scenario : ' + scenario.getName());
-        console.log(' ***** In before hook ***** ');
+        //        console.log(' ***** In before hook ***** ');
 
         callback();
     });
@@ -26,7 +25,7 @@ var myAfterHooks = function () {
 
     this.After(function (callback) {
         //        this will be executed after each scenarios
-        console.log(' ***** In after hook ***** ');
+        //        console.log(' ***** In after hook ***** ');
         //            ending test in after hook
         //            cleaning test
         //            closing browser

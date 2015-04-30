@@ -57,7 +57,7 @@ gulp.task('default', ['clean'], function () {
 
 // e2e tasks
 // starting selenium standalone  server
-gulp.task('start-sel', function () {
+gulp.task('sel', function () {
     //1. run your script as a server 
     var server = gls.new('node_modules/selenium-server/bin/selenium');
     server.start();

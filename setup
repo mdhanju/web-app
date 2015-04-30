@@ -1,0 +1,2 @@
+#!/bin/bash
+     sel='node_modules/selenium-server/bin/selenium'

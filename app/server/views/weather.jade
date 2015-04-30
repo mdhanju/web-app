@@ -1,27 +1,28 @@
 extends layout.jade
-block header
-    .row
-        .col-sm-6.col-sm-6-custom
-            form.form-inline.col-sm-6-custom-home-mor(action='/weatherData',method='post')
-                        h3.form-signin-heading Weather Forcast
-                        br
-                        //.con-label-input
-                          //  label(for='loanTerm') Country : 
-                            //select.form-control#loanTerm(name='country', disabled='disabled')
-                              //  option(value='', selected='selected') United States
-                        br
-                        .con-label-input
-                            include ./includes/weather/userInput.jade
-                        //br
-                        //.con-label-input
-                            include ./includes/weather/countries.jade
-                        //br
-                        //.con-label-input
-                            include ./includes/weather/states.jade 
-                        //br
-                        //.con-label-input
-                            include ./includes/weather/cities.jade
-                        br
-                        br
-                        .btn-custom-home-mor-holder
-                            button.btn.btn-lg.btn-primary.btn-block(type='submit') Submit
+block body
+    include ./header.jade
+        .row
+            .col-sm-6.col-sm-6-custom
+                form.form-inline.col-sm-6-custom-home-mor(action='/weatherData',method='post')
+                            h3.form-signin-heading#headingWeatherForcast Weather Forcast
+                            br
+                            //.con-label-input
+                              //  label(for='loanTerm') Country : 
+                                //select.form-control#loanTerm(name='country', disabled='disabled')
+                                  //  option(value='', selected='selected') United States
+                            br
+                            .con-label-input
+                                include ./includes/weather/userInput.jade
+                            //br
+                            //.con-label-input
+                                include ./includes/weather/countries.jade
+                            //br
+                            //.con-label-input
+                                include ./includes/weather/states.jade 
+                            //br
+                            //.con-label-input
+                                include ./includes/weather/cities.jade
+                            br
+                            br
+                            .btn-custom-home-mor-holder
+                                button.btn.btn-lg.btn-primary.btn-block(type='submit') Submit

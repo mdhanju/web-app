@@ -28,7 +28,7 @@
 ## Run e2e test
 
 #Start Selenium Server 
-#cd node-express    gulp start-sel
+#cd node-express    gulp sel
 #Start e2e test
 #cd node-express    gulp e2e
 

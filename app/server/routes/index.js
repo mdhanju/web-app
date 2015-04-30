@@ -28,6 +28,9 @@ exports.mission = function (req, res) {
     res.render('mission', {});
 };
 
+exports.carLoan = function (req, res) {
+    res.render('carLoan', {});
+};
 
 exports.searching = function (req, res) {
     //    res.send("WHEEE");
