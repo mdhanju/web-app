@@ -14,7 +14,6 @@ app.set('host', process.env.host || 'localhost');
 app.set('views', path.join(__dirname, 'server/views'));
 app.set('view engine', 'jade');
 
-
 //app.use(router);
 app.use(express.static(path.join(__dirname, '../')));
 app.use(bodyParser.json());
@@ -27,19 +26,7 @@ app.all('/', function (req, res, next) {
     next(); // pass control to the next handler
 });
 
-app.get('/', routes.home);
-app.get('/services', routes.services);
-app.get('/employees', routes.employees);
-app.get('/contact', routes.contact);
-app.get('/mission', routes.mission);
-app.get('/weather', routes.weather);
-app.get('/carLoan', routes.carLoan);
-app.get('/users', user.list);
-
-app.post('/morData', postData.morData);
-app.post('/weatherData', postData.weatherData);
-app.post('/carLoan', postData.carLoan);
-
+require('./server/router')(app);
 
 http.createServer(app).listen(app.get('port'), app.get('port'), function () {
     console.log('Server  started  http://' + app.get('host') + ":" + app.get('port'));

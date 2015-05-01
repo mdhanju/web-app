@@ -26,24 +26,42 @@ exports.weatherData = function (req, res) {
     //    var url = "http://api.openweathermap.org/data/2.5/weather";
     //    var reqObj = url + '?q=' + city;
     //    weather.getWeatherCity(reqObj, function (result) {
-    weather.getWeatherCity("http://api.openweathermap.org/data/2.5/weather?q=" + req.body.city, function (result) {
+    var url = 'http://api.worldweatheronline.com/free/v2/weather.ashx?key=2699c2d06bc888d90e7064bc31eaa&q=' + req.body.city + '&num_of_days=1&format=json';
+
+    weather.getWeatherCity(url, function (result) {
         console.log('**** in callback function after getting weather ****');
         console.log(req.body.city);
+
         var weatherDes;
-        console.log(!result);
-        if ((result == 404) || (req.body.city === "")) weatherDes = 'Not able to retrieve weather or Invalid city';
-        else {
-            console.log("------");
-            weatherDesTemp = JSON.parse(result);
-            if (weatherDesTemp.hasOwnProperty("message")) weatherDes = 'Invalid city';
-            else weatherDes = weatherDesTemp.weather[0].description;
-        }
-        res.render('resultweather', {
-            city: req.body.city,
-            weather: weatherDes
+        console.log(result);
+        parseForm.printRes(result);
+        weather.sortWeather(result, function (myObj) {
+            console.log('temp == ' + myObj.cTemp);
+            res.render('resultweather', {
+
+                city: myObj.city,
+                weather: myObj.currentTemp,
+                todayDate: myObj.todayDate,
+                sunrise: myObj.sunrise,
+                sunset: myObj.sunset,
+                desc: myObj.description,
+                srcurl: myObj.image
+            });
         });
+        //        sortWeather
+        //        if ((result == 404) || (req.body.city === "")) {
+        //            weatherDes = 'Not able to retrieve weather or Invalid city';
+        //        } else {
+        //            console.log("------");
+        //           // weatherDesTemp = JSON.parse(result);
+        //            if (weatherDesTemp.hasOwnProperty("message")) weatherDes = 'Invalid city';
+        //            else weatherDes = weatherDesTemp.weather[0].description;
+        //        }
+        //        res.render('resultweather', {
+        //            //            city: req.body.city,
+        //            //            weather: weatherDes
+        //        });
     });
-    console.log('resWeather ====== ');
 };
 
 
