@@ -1,0 +1,29 @@
+extends layout.jade
+block body
+    include ./header.jade
+        .row
+            .col-sm-6.col-sm-6-custom
+                form.form-inline.col-sm-6-custom-home-mor(action='/carLoan',method='post')
+                            h3.form-signin-heading Currency Converter
+                            br
+                            .con-label-input
+                                select.currency.form-control(name='currFrom')
+                                        option(value='', selected='selected') Select Currency
+                                        option  New   
+                                        option  Used
+                            br
+                            .con-label-input
+                                label Convert To
+                            br
+                            .con-label-input
+                                select.currency.form-control(name='currTo')
+                                        option(value='', selected='selected') Select Currency
+                                        option  24 Months   
+                                        option  36 Months
+                                        option  48 Months
+                                        option  60 Months
+                                        option  72 Months
+                            br
+                            br
+                            .btn-custom-home-mor-holder
+                                button.btn.btn-lg.btn-primary.btn-block(type='submit') Submit

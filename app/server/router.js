@@ -4,16 +4,16 @@ var routes = require('./routes');
 //var router = express.Router();
 
 module.exports = function (app) {
-    
+
     app.all(['*', '*/**'], function (req, res, next) {
         console.log('Router is called  ...');
-        
         next(); // pass control to the next handler
     });
-   
+
+
     app.get('/', routes.home);
-    app.get('/services', routes.services);
-    app.get('/employees', routes.employees);
+    app.get('/currency', routes.currency);
+    app.get('/mortgage', routes.mortgage);
     app.get('/contact', routes.contact);
     app.get('/mission', routes.mission);
     app.get('/weather', routes.weather);

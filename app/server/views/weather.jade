@@ -3,7 +3,7 @@ block body
     include ./header.jade
         .row
             .col-sm-6.col-sm-6-custom
-                form.form-inline.col-sm-6-custom-home-mor(action='/weatherData',method='post')
+                form.form-inline.col-sm-6-custom-home-mor(action='/weatherData',method='post',data-toggle="validator")
                             h3.form-signin-heading#headingWeatherForcast Weather Forcast
                             br
                             //.con-label-input

@@ -150,6 +150,10 @@ select {
     float: right;
 }
 
+select.currency {
+    float:none;
+    min-width: 60%;
+}
 label {
     float: left
 }

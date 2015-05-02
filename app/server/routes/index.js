@@ -8,12 +8,12 @@ exports.home = function (req, res) {
     res.render('home', {});
 };
 
-exports.employees = function (req, res) {
-    res.render('employees', {});
+exports.mortgage = function (req, res) {
+    res.render('mortgage', {});
 };
 
-exports.services = function (req, res) {
-    res.render('services', {});
+exports.currency = function (req, res) {
+    res.render('currency', {});
 };
 
 exports.contact = function (req, res) {

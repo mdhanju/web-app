@@ -48,3 +48,10 @@
 #runing selenium server
 # Error - "java.net.BindException: Selenium is already running on port 4444
 #http://localhost:4444/selenium-server/driver/?cmd=shutDownSeleniumServer# web-app
+
+
+
+#TASKS
+#1. Weather Forcast         DONE
+#2. Mortgage Calculator     TODO
+#3. Currency Convertor      TODO
