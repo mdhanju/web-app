@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 module.exports = {
     getValueFromJson: function (finderkey, res, callback) {
         result = JSON.parse(res);

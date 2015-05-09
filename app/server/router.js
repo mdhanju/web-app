@@ -1,7 +1,7 @@
 var postData = require('./routes/postReq');
 var user = require('./routes/user');
 var routes = require('./routes');
-//var router = express.Router();
+
 
 module.exports = function (app) {
 
@@ -9,7 +9,6 @@ module.exports = function (app) {
         console.log('Router is called  ...');
         next(); // pass control to the next handler
     });
-
 
     app.get('/', routes.home);
     app.get('/currency', routes.currency);
@@ -19,9 +18,9 @@ module.exports = function (app) {
     app.get('/weather', routes.weather);
     app.get('/carLoan', routes.carLoan);
     app.get('/users', user.list);
+    app.get('/getTodaysRate', postData.getTodaysRate);
 
     app.post('/morData', postData.morData);
     app.post('/weatherData', postData.weatherData);
     app.post('/carLoan', postData.carLoan);
-
 };

@@ -6,22 +6,10 @@ block body
                 form.form-inline.col-sm-6-custom-home-mor(action='/weatherData',method='post',data-toggle="validator")
                             h3.form-signin-heading#headingWeatherForcast Weather Forcast
                             br
-                            //.con-label-input
-                              //  label(for='loanTerm') Country : 
-                                //select.form-control#loanTerm(name='country', disabled='disabled')
-                                  //  option(value='', selected='selected') United States
-                            br
                             .con-label-input
                                 include ./includes/weather/userInput.jade
                             br
                             .con-label-input
-                                //include ./includes/weather/countries.jade
-                            //br
-                            //.con-label-input
-                                include ./includes/weather/states.jade 
-                            //br
-                            //.con-label-input
-                                include ./includes/weather/cities.jade
                             br
                             br
                             .btn-custom-home-mor-holder

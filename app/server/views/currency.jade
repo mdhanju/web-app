@@ -3,27 +3,27 @@ block body
     include ./header.jade
         .row
             .col-sm-6.col-sm-6-custom
-                form.form-inline.col-sm-6-custom-home-mor(action='/carLoan',method='post')
+                form.form-inline.col-sm-6-custom-home-mor(action='/getCurrency',method='post')
                             h3.form-signin-heading Currency Converter
                             br
                             .con-label-input
-                                select.currency.form-control(name='currFrom')
-                                        option(value='', selected='selected') Select Currency
-                                        option  New   
-                                        option  Used
+                                select.currency.form-control#currFrom(name='currFrom')
+                                    option(value="") Select Country : 
+                                    - var options = myCus
+                                    each option in options
+                                        option(value=option.value, selected=(mood==option.value))= option.label
+                            br
                             br
                             .con-label-input
-                                label Convert To
+                                label Convert to :
                             br
                             .con-label-input
-                                select.currency.form-control(name='currTo')
-                                        option(value='', selected='selected') Select Currency
-                                        option  24 Months   
-                                        option  36 Months
-                                        option  48 Months
-                                        option  60 Months
-                                        option  72 Months
+                                select.currency.form-control#currTo(name='currTo')
+                                    option(value="") Select Country : 
+                                    - var options = myCus
+                                    each option in options
+                                        option(value=option.value, selected=(mood==option.value))= option.label
                             br
-                            br
-                            .btn-custom-home-mor-holder
-                                button.btn.btn-lg.btn-primary.btn-block(type='submit') Submit
+            .col-sm-6.col-sm-6-custom
+                form.form-inline.col-sm-6-custom-home-mor
+                    h1#results 

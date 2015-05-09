@@ -11,15 +11,21 @@ block body
                 .jumbotron
                     form.form-group(action='/contact',method='get')
                         h2.form-signin-heading Contact Us
-                        input.form-control(type="fname", placeholder="First Name", autofocus="autofocus")
+                        .con-label-input
+                            input.form-control(type="fname", placeholder="First Name", autofocus="autofocus")
                         br
-                        input.form-control(type="lname", placeholder="Last Name")
+                        .con-label-input
+                            input.form-control(type="lname", placeholder="Last Name")
                         br
-                        input.form-control(type="email", placeholder="Email address")
+                        .con-label-input
+                            input.form-control(type="email", placeholder="Email address")
                         br
-                        textarea.form-control.input-md(type="comments", placeholder="Type Comments")
+                        .con-label-input
+                            textarea.form-control.input-md(type="comments", placeholder="Type Comments")
                         br
-                        button.btn.btn-lg.btn-primary.btn-block(type="submit") Submit
+                        br
+                        .con-label-input
+                            button.btn.btn-lg.btn-primary.btn-block(type="submit") Submit
                         script(src='node_modules/jquery/dist/jquery.min.js')
                         script(src='node_modules/bootstrap/dist/js/bootstrap.min.js')
                         script(src='app/public/js/contactMap.js')

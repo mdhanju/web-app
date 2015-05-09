@@ -7,6 +7,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var app = express();
 var router = express.Router();
+var PROPERTIES = require('../data/currency/reCountry.json');
 
 //all environments 
 app.set('port', process.env.port || 3000);

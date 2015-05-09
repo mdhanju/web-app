@@ -177,3 +177,7 @@ label {
 .cutomSelectWeather {
     min-width: 60%;
 }
+
+##resultWeather{
+    display: block;
+}
