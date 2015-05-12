@@ -7,22 +7,21 @@ block body
                             h3.form-signin-heading Currency Converter
                             br
                             .con-label-input
+                                label(for='loanTerm') From : 
                                 select.currency.form-control#currFrom(name='currFrom', autofocus='autofocus')
-                                    option(value="") Select Country : 
-                                    - var options = myCus
-                                    each option in options
-                                        option(value=option.value, selected=(mood==option.value))= option.label
+                                        option(value="") Select Country : 
+                                        - var options = myCus
+                                        each option in options
+                                            option(value=option.value, selected=(mood==option.value))= option.label
                             br
                             br
                             .con-label-input
-                                label Convert to :
-                            br
-                            .con-label-input
+                                label(for='loanTerm') To :
                                 select.currency.form-control#currTo(name='currTo')
-                                    option(value="") Select Country : 
-                                    - var options = myCus
-                                    each option in options
-                                        option(value=option.value, selected=(mood==option.value))= option.label
+                                        option(value="") Select Country : 
+                                        - var options = myCus
+                                        each option in options
+                                            option(value=option.value, selected=(mood==option.value))= option.label
                             br
             .col-sm-6.col-sm-6-custom
                 form.form-inline.col-sm-6-custom-home-mor

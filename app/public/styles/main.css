@@ -145,15 +145,22 @@ body {
     min-height: 456px;
 }
 
-input,
-select {
+input {
     float: right;
 }
 
 select.currency {
-    float:none;
-    min-width: 60%;
+    float: right;
+    margin-top: -1%;
+    min-width: 70%;
+    max-width: 80%;
 }
+/*
+select.currency {
+    margin-top: -2%
+}
+*/
+
 label {
     float: left
 }
@@ -178,6 +185,6 @@ label {
     min-width: 60%;
 }
 
-##resultWeather{
+##resultWeather {
     display: block;
 }

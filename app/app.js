@@ -11,7 +11,7 @@ var PROPERTIES = require('../data/currency/reCountry.json');
 
 //all environments 
 app.set('port', process.env.port || 3000);
-app.set('host', process.env.host || 'localhost');
+app.set('host', process.env.host || '127.0.0.1');
 app.set('views', path.join(__dirname, 'server/views'));
 app.set('view engine', 'jade');
 
