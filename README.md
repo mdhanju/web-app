@@ -28,7 +28,13 @@
 ## Run e2e test
 
 #Start Selenium Server 
-#cd node-express    gulp sel
+#cd node-express    gulp sel  
+
+#	OR 
+
+#cd node-express	java -jar jars/selenium-server-standalone-2.45.0.jar
+
+
 #Start e2e test
 #cd node-express    gulp e2e
 

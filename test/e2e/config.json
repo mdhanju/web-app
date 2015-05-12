@@ -1,7 +1,0 @@
-{
-    "host": "localhost",
-    "logLevel": "silent",
-    "allowedLogLevels": ["data", "silent", "verbose", "command", "result"],
-    "browser": "chrome",
-    "allowedBrowser": ["chrome", "firefox"]
-}

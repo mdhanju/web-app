@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var gls = require('gulp-live-server');
-var cucumber = require('gulp-cucumber');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -54,33 +53,6 @@ gulp.task('watch', function () {
 gulp.task('default', ['clean'], function () {
     gulp.start('lint', 'css', 'scripts', 'watch', 'built');
 });
-
-// e2e tasks
-// starting selenium standalone  server
-gulp.task('sel', function () {
-    //1. run your script as a server 
-    var server = gls.new('node_modules/selenium-server/bin/selenium');
-    server.start();
-});
-
-// running e2e test - using cucumber
-gulp.task('e2e', function () {
-    return gulp.src('test/e2e/features/*').pipe(cucumber({
-        'steps': 'test/e2e/steps/**/*.js',
-        'support': 'test/e2e/support/*.js',
-        'format': 'summary'
-    }));
-});
-
-// Watch all js, css files for ant changes
-gulp.task('e2e-watch', function () {
-    gulp.watch(['test/cucumber/steps/**/*.js', 'test/cucumber/support/*.js'], ['lint']);
-});
-
-gulp.task('test', function () {
-    gulp.start('start-sel', 'e2e');
-});
-
 
 //unit test
 gulp.task('unit-test', function () {

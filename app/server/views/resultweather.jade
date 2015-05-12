@@ -3,12 +3,12 @@ block body
     include ./header.jade
         .container
             .jumbotron
-                a.btn.btn-lg(href='/weather') Go Back
+                a.btn.btn-lg#goBack(href='/weather') Go Back
                 br
                 img(src='#{srcurl}') 
-                h3 #{desc}
-                h2 #{city}
-                h3 Today' Date: #{todayDate}
-                h3 Rite now: #{weather} °F
-                h4 Sun Rise: #{sunrise}
-                h4 Sun Set: #{sunset}
+                h3#weather #{desc}
+                h2#city #{city}
+                h3#todatDate Today' Date: #{todayDate}
+                h3#tempFar Rite now: #{weather} °F
+                h4#sunRise Sun Rise: #{sunrise}
+                h4#sunSet Sun Set: #{sunset}
