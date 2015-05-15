@@ -5,14 +5,12 @@ function initialize() {
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-
-
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
     var markers = [
         ['London Eye, London', 51.503454, -0.119562],
         ['Palace of Westminster, London', 51.499633, -0.124755]
-  ];
+    ];
 
 
     // markers & place each one on the map  

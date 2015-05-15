@@ -142,7 +142,8 @@ body {
 }
 
 .col-sm-6-custom {
-    min-height: 456px;
+    /*min-height: 456px;*/
+  min-height: 250px;
 }
 
 input {

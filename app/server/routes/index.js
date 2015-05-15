@@ -16,9 +16,9 @@ exports.mortgage = function (req, res) {
 exports.currency = function (req, res) {
     var file = 'data/currency/reCountry.json';
     jf.readFile(file, function (err, obj) {
-//        console.log(err)
+       console.log(obj);
 //        console.log(util.inspect(obj))
-        console.log(util.inspect(obj));
+        // console.log(util.inspect(obj));
         res.render('currency', {
             myCus: obj
         });

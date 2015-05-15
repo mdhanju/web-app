@@ -71,14 +71,16 @@ exports.getTodaysRate = function(req, res) {
     console.log(' currF == ' + currF);
     console.log(' currT == ' + currT);
 
-
+    var rate;
     var finalUrl = rawUrl + "from=" + currF + "&to=" + currT + key;
 
     request(finalUrl, function(err, resp, body) {
         var result;
-        if (err) console.log(' ***** ERROR ***** ');
+        if (err)  console.log(' ****** ERROR FROM SERVICE ****** ');
+        else{
         console.log(' BODY == ' + body);
-        var rate = WE.getValueFromJson('rate', body, function() {});
+         rate = WE.getValueFromJson('rate', body, function() {});
+        }
         res.send(rate);
     });
 };

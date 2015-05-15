@@ -1,5 +1,6 @@
 var request = require('request');
 WE = require('../modules/parseJson');
+var Promise = require('promise');
 
 module.exports = {
 
@@ -17,13 +18,26 @@ module.exports = {
 
         var finalUrl = rawUrl + "from=" + currF + "&to=" + currT + key;
 
-        request(finalUrl, function(err, resp, body) {
-            var result;
-            if (err) console.log(' ***** ERROR ***** ');
-            // callback(body);
-            console.log(' BODY == ' + body);
-            return body;
+        // request(finalUrl, function(err, resp, body) {
+        //     var result;
+        //     if (err) console.log(' ***** ERROR ***** ');
+        //     // callback(body);
+        //     console.log(' BODY == ' + body);
+        //     return body;
 
-        });
+        // });
+
+        var promise = new Promise(function(resolve, reject) {
+            get(rawUrl, function(err, res) {
+                if (err) reject(err);
+                else {
+                    // resolve(res);
+                    console.log(' BODY == ' + body);
+                    return body;
+                }
+            })
+        })
+
+
     }
 };

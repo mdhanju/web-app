@@ -608,60 +608,8 @@
     "label": "Vanuatu Vatu"
   },
   {
-    "value": "WST",
-    "label": "Samoan Tala"
-  },
-  {
-    "value": "XAF",
-    "label": "CFA Franc BEAC"
-  },
-  {
-    "value": "XAG",
-    "label": "Silver Ounce"
-  },
-  {
-    "value": "XAU",
-    "label": "Gold Ounce"
-  },
-  {
-    "value": "XBT",
-    "label": "Bitcoin"
-  },
-  {
-    "value": "XCD",
-    "label": "East Caribbean Dollar"
-  },
-  {
-    "value": "XCP",
-    "label": "Ounces of Copper"
-  },
-  {
-    "value": "XDR",
-    "label": "IMF Special Drawing Rights"
-  },
-  {
-    "value": "XOF",
-    "label": "CFA Franc BCEAO"
-  },
-  {
-    "value": "XPD",
-    "label": "Palladium Ounce"
-  },
-  {
-    "value": "XPF",
-    "label": "CFP Franc"
-  },
-  {
-    "value": "XPT",
-    "label": "Platinum Ounce"
-  },
-  {
     "value": "YER",
     "label": "Yemeni Rial"
-  },
-  {
-    "value": "ZAR",
-    "label": "South African Rand"
   },
   {
     "value": "ZMW",

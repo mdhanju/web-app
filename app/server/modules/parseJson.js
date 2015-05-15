@@ -2,6 +2,7 @@ var fs = require('fs');
 
 module.exports = {
     getValueFromJson: function (finderkey, res, callback) {
+        if (typeof res === 'undefined') return null;
         result = JSON.parse(res);
         var value = "Not Available";
         if (typeof result === 'object') {
